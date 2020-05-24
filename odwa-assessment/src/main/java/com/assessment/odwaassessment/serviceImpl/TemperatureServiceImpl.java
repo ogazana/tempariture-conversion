@@ -29,7 +29,7 @@ public class TemperatureServiceImpl implements TemperatureService {
         } else {
             throw new IllegalArgumentException("Kelvin's lowest scale is 0 and nothing less than 0");
         }
-        return celsius;
+        return Math.round(celsius);
     }
 
     /**
@@ -51,7 +51,7 @@ public class TemperatureServiceImpl implements TemperatureService {
             LOGGER.error("Cannot convert a 0 or negative value of pounds");
             throw new IllegalArgumentException("Cannot convert a 0 or negative value of pounds");
         }
-        return kilograms;
+        return Math.round(kilograms);
     }
 
     /**
@@ -72,7 +72,7 @@ public class TemperatureServiceImpl implements TemperatureService {
             LOGGER.error("Cannot convert a 0 or negative value of miles");
             throw new IllegalArgumentException("Cannot convert a 0 or negative value of miles");
         }
-        return kilometers;
+        return Math.round(kilometers);
     }
 
 
